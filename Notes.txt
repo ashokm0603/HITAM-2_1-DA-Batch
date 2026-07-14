@@ -1,0 +1,420 @@
+Tokens : 
+------------
+
+        2. Keywords 
+            ->Keywords  are the predefine words which having its meaning
+            ->In python total 34 keywords are there 
+            Ex: if, else , elif, while ,def , for ,class ,expect , try ,and , in , not , or , break , continue , return , import , pass , int , boolean , float , is , as ..etc 
+
+
+        3. literals 
+            ->literals are the values used in python code 
+            ->Types : 
+                1. Numeric literals ->int , float 
+                2. String literals 
+
+
+
+        4. operators 
+            ->operators are the symbols used to perform some operations on operands 
+            Ex: 10+20
+            Types: 
+                1. Athematic operators (+,-,*,/ ,// ,% , **)
+                2. Assignment operators (=,+=,-=,/= , *=,%=)
+                3. Conditional operators (==, !=)
+                4. logical operators (AND , OR , NOT)
+                5. bitwise operators (>>,<<)
+                6. special operators (in , not in , is not , is )
+                7. relational operators (>,>=,<,<=)
+
+        5. separators 
+            ->separators are used separate the given code 
+            Ex: () , [] , {} ,. , " " ,'' , `` ,<> 
+
+        6. Comments : 
+            ->Comments are used to Comment the give code 
+            ->in python to comment we use # symbol 
+
+
+Variable's
+---------
+    ->Variable's are  the named memory location used to store data/values , and  it can change N No. of times during execution 
+                        or 
+    ->Variable's acts like a containers used to store data/ values 
+    Syntax 1: 
+                variable_name =value 
+
+    Syntax 2:
+        variable1 , variable2 , variable3.. =value1 , value2, value3.. 
+
+    i. Variable declaration and initialization 
+            ->Defining a variable/ declaring the variable is called as  variable declaration
+            ->assigning a value to the variable is called as a variable initialization 
+
+    ii. Variable utilization 
+            ->using a variable/ accessing variable's is called as variable utilization
+
+    iii. Variable re-initialization 
+            ->Reassigning a value to the variable is called as a variable re-initialization 
+            
+Data Types: 
+----------
+    ->DataTypes represent the what type of Data we are storing on the variable 
+    Types: 
+        1. single valued 
+                i.  int 
+                ii. float
+                iii. boolean 
+
+        2. multi valued
+                i. string 
+                        ->String the series characters
+                        ->String are Mutable in Nature 
+
+                ii. list 
+                        ->List is the collection of Data 
+                        ->In python to declare list using  [] brackets
+                        ->We can store both homogenous and heterogenous type of data 
+                        ->list are the Mutable in nature (we can change the list values)
+                        ->List follows index's
+                        ->list allow duplicate values 
+
+
+                iii. tuple 
+                     ->tuple is the one of the dataType in python used to store collection data/value 
+                     ->we can  declare tuple in python using () 
+                     ->We can store both homogenous and heterogenous type of data in tuple 
+                     ->tuple are the immutable in nature (we can not  change the elements in tuple)
+                     ->tuple allow duplicate values 
+
+                iv. set 
+                     ->tuple is the one of the dataType in python used to store collection data/value 
+                     ->we can  declare set in python using {} 
+                     ->set doesn't follow order formate 
+                     ->we can store homogenous and heterogenous data 
+                     ->set are Mutable in nature
+                     ->set doesn't allow duplicate values 
+
+                    
+
+
+                v . dictionary 
+                        ->dictionary is used store collection data in form of key and value pair 
+                        ->in dictionary key are unique and the value are duplicate 
+                       ->we can  declare dictionary in python using {key:value} 
+
+
+    ->In Python to check type of DATA we have function "type()" 
+    ->To View inbuilt function  "dir(className)"
+
+
+Type Casting : 
+--------------
+        ->converting one Type Data into Another Type 
+        
+        Types of Type Casting 
+        ----------------------
+                1. internal Type Casting/implicit Type Casting
+                        ->python interpreter Converts internally One Data to Another DataType is called as a internal type casting 
+                        Ex: 
+                                a=10
+                                b=20.5
+                                result=a+b 
+                                print(result)
+
+                        Ex: 
+                                print(True+True)
+
+                2. external Type Casting/explicit Type Casting
+                        ->converting one type of data to another type manually 
+                        -> using inbuilt functions like 
+                                1. int()     ->  integer values
+                                2. float()     ->  float values
+                                3. bool()     ->  
+                                4. list()     ->  
+                                5. tuple()     ->  
+                                6. dict()     -> 
+                                7. set()     -> 
+                                8. str()     ->  
+
+
+input() function : 
+-----------------
+        ->input() are used to take input from the user during run time 
+        ->return type of input() function is String 
+
+Conditional Statements: 
+------------------------
+        ->Conditional Statements are used to execute block of code based on condition 
+
+        1. if 
+                ->'if ' Statement will get execute only when condition true 
+                Syntax : 
+
+                         if condition: 
+                                Statements
+                1. WAPP to check given number is positive No are not 
+                2. WAPP to display 'is eligible to apply Job' if the age of the user between 18 to 25
+
+                3. WAPP to display empDetails (name , role , salary, experience) who are working as a role 'developer' or 'BDA' 
+                
+
+
+        2. if else 
+                ->if block will execute when condition becomes true if the condition not satisfied then else block will execute 
+
+                Syntax : 
+
+                        if condition: 
+                                Statements
+                        else:
+                                Statements
+
+        3. if elif else 
+                -> if we want check more then two condition we will use elif 
+
+                Syntax : 
+                        if condition: 
+                                Statements
+                        elif condition: 
+                                Statements
+                        else: 
+                                Statements
+
+        Q . WAPP to check max value from 3 input's 
+
+
+        4. else if ladder 
+                -> if we want check more then two condition we will use elif 
+                Syntax : 
+                        if condition: 
+                                Statements
+                        elif condition: 
+                                Statements
+                        elif condition: 
+                                Statements
+                                .
+                                .
+                        else: 
+                                Statements
+
+        5. nested if else 
+        
+
+Loops : 
+-------
+        ->loops are used to iterate Statements until condition becomes false 
+
+        1. for loop 
+                ->when we know the range when we need to use for loop 
+
+                Syntax 1: 
+                        for variableName in range(start, end, step):
+                                Statements
+                
+                Syntax 2: 
+                        in string , list , tuple 
+
+                        for variable_Initialization in VariableName:
+                                Statements
+
+        2. while loop 
+                ->when we don't know the range when we need to use while loop 
+                
+                Syntax 
+                        while condition: 
+                                Statements
+
+
+        Q. WAPP to display only odd digits in given number 1234
+        Q. WAPP to display product of even digits in given number 32456
+
+
+Functions : 
+------------
+        ->Functions are the block Statements that will get execute where ever it called 
+        ->In Python we define function using 'def' keyword 
+
+        Why Functions Need : 
+        ----------------------  
+                ->To perform specific Tasks 
+                ->To perform Code Reusability 
+                ->To reduce boiler plate
+                ->to improve code readability 
+
+        Syntax : 
+                def functionName(parameter...):
+                        Statement-1
+                       
+                        return value 
+
+        Types of Functions 
+                1. user define functions 
+                        ->any functions which is declare by user/ programmer as per there required is called as user define function
+                         
+        
+                2. predefine functions  
+                        ->predefine function are the inbuilt functions that already present in python 
+                        Ex: print() , len() , max() , min() , count() , pow()...etc 
+        
+       different ways to  declare functions : 
+       ----------------------------------------
+                1. function without parameter and return value 
+                2. function with parameter and without return value 
+                3. function without parameter and with return value 
+                4. function with parameter and return value 
+
+                function with parameter : 
+                        ->when ever we want to pass input to the when we need to go function with parameter
+
+                function with return value :
+                        ->When ever we want result of the function for farther operations we need to go function with return value 
+
+                types of arguments: 
+                        1. default arguments
+                        2. keyword arguments
+                        3. Arbitrary arguments (*args , **kwargs) 
+                        
+OOP(object oriented programming) : 
+------
+        i. class 
+                ->class is a blue print/ template used to create object 
+                ->class contains 
+                        i.  variables (attributes/data members)
+                        ii. function (functional members/methods)
+                        iii.constructor's 
+
+                Syntax: 
+                        class className:
+                                functions 
+
+        ii. object : 
+                -> Object is an real time entity which have both state(variables) and behavior(function)
+                                or 
+                ->Object is an instance which have both attributes and behavior 
+                ->state means what it can hold 
+                ->behavior means how it can behavior
+
+                 Syntax : 
+                        class className: 
+                                pass 
+
+                        className()  ->object 
+
+        constructor : 
+            ->constructor are the special method used to initialize variable values 
+            ->constructor will get invoke whenever we create object for class 
+            ->in python we declare constructor using 
+                                "__init__()"
+
+
+        OOP's Principles : 
+        ------------------
+                1. Inheritance 
+                2. polymorphism
+                3. Encapsulation
+                4. Abstraction
+
+
+1. Inheritance: 
+        ->inheriting properties from one to another class another class is called a Inheritance
+                        or 
+        ->occurring properties from one class to another class is also called as a Inheritance
+
+ Note : ->To perform code Reusability
+        ->To achieve method overRidding Inheritance is required 
+        ->To achieve Abstraction we required Inheritance
+        
+
+        Types of Inheritance:
+                1. Single Level Inheritance 
+                        ->single subClass/child Class/ Derived class occurring properties from only one superClass/parent Class /base Class
+
+
+                2. Multi Level Inheritance
+                        ->subClass occurring properties from superClass interns superClass occurring from its superClass
+
+
+                3. hybrid Inheritance
+                        ->the combination single level , multi level or hierarchical is called hybrid Inheritance
+
+                4. hierarchical Inheritance
+                        ->multiple subClass's occurring properties from only one superClass 
+                        
+                5. multiple Inheritance 
+                        ->single subClass occurring properties from multiple superClass's 
+
+
+
+
+        2. polymorphism : 
+                ->same method showing different behavior throughout its life cycle
+                ->in python to polymorphism we required Inheritance and method overRiding 
+
+overRiding : 
+         ->developing a same method in subClass as in ur superClass but different implements in subClass
+
+
+        note:-> whenever we want to add new features to existing system
+        ->In the case of method overRidding we will get overridden implements 
+
+Method Hiding : 
+--------------
+        ->In case of method overRidding subClass implements hiding the superClass properties is called as method hiding 
+
+super() 
+
+
+
+
+
+    
+    3.Encapsulation : 
+        -> warping up of data members(variables) and function members(functions) into a single point by declaring private variable 
+
+        Access specifiers : 
+                1. public                       Ex: name 
+                2. protected                    Ex: _name 
+                3. private                      Ex: __name 
+
+4. Abstraction: 
+        ->hiding complicity of the system and exposing functional required to the end user 
+        
+        
+        ->we can achieve Abstraction using Inheritance and abstract class
+
+Exception:
+----------
+        ->Exception's are run time error /instance that triggers and stops execution 
+        ->To handle Exception using "try except " or "try expect finally"
+
+
+Exception Handling : 
+--------------------
+
+
+
+
+
+DSA : 
+-----
+
+Time complicity : 
+------------------
+        ->Time complicity means how many operations takes base on input size increase
+
+        ->We represent Time complicity on big O Notation 
+
+
+        1. O(1) 
+        2. O(log n)
+        3. O(n) 
+        4. O(n log n) 
+        5. O(n^2) 
+        6. O(n^3) 
+        7. O(n!) 
+
+        
+
+
+

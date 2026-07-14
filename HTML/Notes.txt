@@ -1,0 +1,121 @@
+Web Applications : 
+------------------
+    ->Any Applications that will be run in browsers is called as web Applications 
+    Types:  
+        1. Static web Applications 
+            ->Any Web Applications doesn't have functionalities 
+            ->To build Static Web Applications we used only HTML and CSS
+
+        2. Dynamic Web Applications
+            ->Any Web Applications having functionalities 
+            ->To build Dynamic Web Applications we used  HTML and CSS and javascript
+
+Web pages : 
+----------
+    ->HTML Documents is called as a web Pages 
+
+Web Site : 
+----------
+    ->Collection of Web pages is called Web site 
+
+Web server : 
+------------
+    ->Collection of web sites is know as a web server 
+    ->web server will understand only IP Address 
+
+
+HTML : 
+-------
+    ->HTML stands for "Hyper markup language" used to build structure web pages 
+    ->present version HTML is HTML 5 
+    ->HTML Contains series of Elements 
+
+HTML boiler Plat/HTML structure: 
+----------------------------------
+
+Tags : 
+-----
+    ->tags are the predefine words which are inclosed with both opening and closing angular brackets
+    Ex: <html> , <body> , <title>..etc 
+
+    Types: 
+        1. paired tags 
+            ->Any tags having both opening and closing tags 
+            Ex: <html></html> , <body></body> , <title></title>, 
+            <div></div> , <p></p> ,<span></span> ...etc 
+
+            i. heading Tags : 
+                   <h1> </h1>
+                   <h2> </h2>
+                   <h3> </h3>
+                   <h4> </h4>
+                   <h5> </h5>
+                   <h6> </h6>
+
+            ii. formatting tags: 
+                    <b></b>                 ->bold 
+                    <i></i>                 ->italic 
+                    <strong></strong>       ->bold 
+                    <em></em>               ->italic
+                    <u></u>                 ->underline 
+                    <strike></strike>       ->line thought
+                    <mark></mark>           ->highlight  text 
+                    <marquee></marquee>     ->scroll the content 
+                    <sub></sub>             ->subscript (base)
+                    <sup></sup>             ->super script (power)
+                    <center></center>   
+
+
+
+        2. unpaired tags /self closing tags 
+            ->Any tags having only opening  tag 
+            ->Ex: <meta> , <hr> ,<br> ,<input> ,<col> ,<img> ..etc 
+
+
+list in HTML : 
+--------------
+    ->list are used to display items or data in structure formate 
+    Types : 
+        1. ordered List 
+            -><ol></ol> represent the order list
+            -><ol></ol>  contains list items (<li></li>)
+        order list attributes: 
+            1. type : 1, a, A, i, I 
+            2. start 
+            3. reversed
+
+
+        2. unordered List 
+            -><ul></ul> represent the unordered list
+            -><ul></ul>  contains list items (<li></li>)
+        unordered list attributes: 
+            1. type :none , circle , square, desc 
+           
+
+
+        3. description / definition list
+            i. <dl></dl>    description list
+            ii.<dt></dt>   description term
+            iii.<dd></dd>  description data
+
+
+
+        4. nested List 
+            ->List having another list is called as nested List 
+
+
+Forms In HTML : 
+---------------
+    ->Forms are used to collect user information digitally
+
+    To design Form we have form tags : 
+        1. <form></form>            ->
+        2. <fieldset></fieldset>    ->to display form border
+        3. <legend></legend>        ->to label form 
+        4. <label></label>          ->to label input 
+        5. <input>                  -> to collect input from user 
+        6. <select></select>        ->to display drop down options 
+        7. <textarea></textarea>    ->to display flexible input box 
+        8. <button></button> 
+
+
