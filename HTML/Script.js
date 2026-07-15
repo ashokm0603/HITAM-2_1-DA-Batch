@@ -32,9 +32,7 @@ let arr=[10,20,40,true, null]
 console.table(arr);
 
 
-arr.push(20) //insert element at ending of array
-arr.unshift("java") //insert element at starting of array 
-arr.pop()//remove Last  index values +9+
+
 
 arr.shift() //remove ZERO th index values
 
