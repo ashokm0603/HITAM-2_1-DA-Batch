@@ -119,3 +119,43 @@ Forms In HTML :
         8. <button></button> 
 
 
+
+
+
+Javascript: 
+-----------
+    ->Javascript is the scripting language as well as programming language
+
+
+    Use of Javascript: 
+    -------------------
+        ->we can build dynamic web Applications using JS 
+        ->We can add functionalities to web Applications 
+        ->Using JS we can Achieve DOM(Document object Model) functionalities
+        ->Using JS we can manipulate HTML and CSS 
+        ->We can fetch data from Server(api) and we can send data to server 
+
+Implementation of JS : 
+----------------------  
+    1. inline JS
+    2. internal JS 
+    3. external JS 
+
+
+Data types: 
+-----------
+    Types: 
+        1. Primitive DataTypes(immutable in nature )
+            i. string 
+            ii. number 
+            iii. boolean 
+            iv . null 
+            v. undefine 
+            vi. symbol 
+            vii . bigint 
+
+        2. Non Primitive DataTypes (reference data /mutable in nature)
+            i. Arrays 
+            ii. Objects 
+            iii. Functions 
+            iv. class Types 
