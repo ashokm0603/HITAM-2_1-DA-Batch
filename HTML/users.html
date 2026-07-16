@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="row m-5">
+
+        <h1 class="text-center my-4 bg-secondary rounded">User Details</h1>
+
+        <table class="table " align="center">
+            <thead>
+                <tr>
+                    <th class="border border-success bg-success-subtle text-center">First name</th>
+                    <th class="border border-success bg-success-subtle text-center">Last Name</th>
+                    <th class="border border-success bg-success-subtle text-center">Email</th>
+                    <th class="border border-success bg-success-subtle text-center">Phone</th>
+                    <th class="border border-success bg-success-subtle text-center">Age</th>
+                    <th class="border border-success bg-success-subtle text-center">
+                        Actions
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+
+
+        let tbody = document.querySelector('tbody');
+        let api = "https://dummyjson.com/users"
+        fetch(api).then((res) => res.json()).then((data) => {
+
+            data.users.map((person) => {
+                let row = document.createElement('tr')
+                let fName = document.createElement('td')
+                let lname = document.createElement('td')
+                let phone = document.createElement('td')
+                let age = document.createElement('td')
+                let email = document.createElement('td')
+                let actionCol = document.createElement('td')
+                let btn1 = document.createElement("button")
+                let btn2 = document.createElement("button")
+
+                actionCol.append(btn1)
+                actionCol.append(btn2)
+                tbody.append(row)
+                row.append(fName)
+                row.append(lname)
+                row.append(email)
+                row.append(phone)
+                row.append(age)
+                row.append(actionCol)
+
+                btn1.innerText="Edit"
+                btn2.innerText="Delete"
+                btn1.className="btn btn-outline-warning mx-2"
+                btn2.className="btn btn-outline-danger"
+
+                fName.className = "border border-success  text-center"
+                lname.className = "border border-success  text-center"
+                email.className = "border border-success  text-center"
+                phone.className = "border border-success  text-center"
+                age.className = "border border-success  text-center"
+                actionCol.className = "border border-success  text-center"
+
+                fName.innerText = `${person.firstName}`;
+                lname.innerText = `${person.lastName}`;
+                email.innerText = `${person.email}`;
+                age.innerText = `${person.age}`;
+                phone.innerText = `${person.phone}`;
+                console.log(person.age);
+                console.log(person.email);
+
+            })
+            console.log(data.users);
+        }).catch((err) => { console.error(err) })
+    </script>
+</body>
+
+</html>

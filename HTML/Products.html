@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+        <style>
+            img{
+                height: 350px;
+                width: 250px;
+            }
+        </style>
+</head>
+
+<body>
+    <h1 class="text-center m-4 p-3 bg-info rounded">All Products</h1>
+    <div id="row" class="row g-10 m-4">
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script>
+        let row = document.getElementById('row')
+        let api = "https://dummyjson.com/products"
+        fetch(api).then((response) => response.json()).then((data) => {
+            data.products.map((item) => {
+
+                let image = document.createElement('img');
+                let card = document.createElement('div');
+                let col = document.createElement('div');
+                let title=document.createElement('h4')
+                let price=document.createElement('h4')
+                let description=document.createElement('p')
+                let buy=document.createElement('button')
+                let cart=document.createElement('button')
+
+                buy.innerText="Buy"
+                cart.innerText='Add To Cart'
+
+                buy.className="btn btn-success"
+                cart.className="btn btn-warning"
+                col.className="col"
+                card.className="card p-2"
+                col.style.margin="10px"
+                col.append(card)
+                card.append(image)
+                row.append(col)
+                image.src = `${item.thumbnail}`
+                title.innerText=`Title : ${item.title}`
+                price.innerText=`Price : ₹ ${item.price}`
+                description.innerText=`${item.description}`
+                card.append(title)
+                card.append(price)
+                card.append(description)
+                card.append(buy)
+                card.append(cart)
+                console.log(item);
+            })
+        }
+        ).catch((err) => {
+            console.log(err);
+        })
+    </script>
+</body>
+
+</html>
