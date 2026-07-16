@@ -9,43 +9,41 @@
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 
-<body style=" background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTz8WY7SKB6VLzL8nn1JFSpoBbqEBKzz_jsnAebH7quTA&s=10');">
-    <h1 class="text-center p-3 m-4" style="backdrop-filter: blur(10px);box-shadow: 5px 5px 5px 5px black;border-radius: 40px;">Register</h1>
-    <form action="" style="display: flex;justify-content: center;" >
-        <fieldset style="width: 450px;border: 2px solid red; padding: 30px; border-radius: 10px 50px; margin: 20px;backdrop-filter: blur(20px);background-image: linear-gradient(45deg,orange, salmon);">
+<body
+    style=" background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTz8WY7SKB6VLzL8nn1JFSpoBbqEBKzz_jsnAebH7quTA&s=10');">
+    <h1 class="text-center p-3 m-4"
+        style="backdrop-filter: blur(10px);box-shadow: 5px 5px 5px 5px black;border-radius: 40px;">Register</h1>
+    <form action="" style="display: flex;justify-content: center;">
+        <fieldset
+            style="width: 450px;border: 2px solid red; padding: 30px; border-radius: 10px 50px; margin: 20px;backdrop-filter: blur(20px);background-image: linear-gradient(45deg,orange, salmon);">
             <div class="row">
                 <div class="col form-group">
                     <label for="">First Name</label>
-                    <input type="text" class="form-control" placeholder="Enter FirstName">
+                    <input type="text" required class="form-control" id="fname" placeholder="Enter FirstName">
                 </div>
-                 <div class="col form-group">
+                <div class="col form-group">
                     <label for="">Last Name</label>
-                    <input type="text" class="form-control" placeholder="Enter LastName">
+                    <input type="text" required class="form-control" id="lname" placeholder="Enter LastName">
                 </div>
             </div>
-
-
-
-         
-
             <div class="row">
                 <div class="col form-group">
                     <label for="">Email</label>
-                    <input type="email" class="form-control" placeholder="Enter Email">
+                    <input type="email" required class="form-control" id="email" placeholder="Enter Email">
                 </div>
-                
+
             </div>
 
             <div class="row my-2">
                 <div class="col form-group">
                     <label for="">Phone NO:</label>
-                    <input type="tel" placeholder="+91" class="form-control">
+                    <input type="tel" required id="phoneNo" placeholder="+91" class="form-control">
                 </div>
                 <div class="col form-group">
                     <label for="">Gender</label> <br>
-                    <input name="gender" type="radio">Male
-                    <input name="gender" type="radio">Female
-                    <input name="gender" type="radio">Others
+                    <input name="gender" value="Male" type="radio">Male
+                    <input name="gender" value="Female" type="radio">Female
+                    <input name="gender" value="Others" type="radio">Others
                 </div>
             </div>
 
@@ -58,10 +56,10 @@
                     <label for="">City</label>
                     <select class="form-select">
                         <option value="">Choose City</option>
-                        <option value="">Hyderabad</option>
-                        <option value="">Kochi</option>
-                        <option value="">Bangalore</option>
-                        <option value="">Vijayawada</option>
+                        <option name="city" value="Hyderabad">Hyderabad</option>
+                        <option name="city" value="Kochi">Kochi</option>
+                        <option name="city" value="Bangalore">Bangalore</option>
+                        <option name="city" value="Vijayawada">Vijayawada</option>
                     </select>
 
                 </div>
@@ -71,7 +69,7 @@
             <div class="row my-2">
                 <div class="col form-group">
                     <label for="">Address :</label>
-                    <input type="text" placeholder="Enter Full Address" class="form-control">
+                    <input type="text" id="address" placeholder="Enter Full Address" class="form-control">
                 </div>
             </div>
             <div class="row">
@@ -83,6 +81,50 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+
+
+
+    <script>
+        let userFname = document.getElementById('fname')
+        let userLname = document.getElementById('lname')
+        let userEmail = document.getElementById('email')
+        let userPhoneNo = document.getElementById('phoneNo')
+        let userAddress = document.getElementById('address')
+
+        let userGender = document.getElementsByName('gender')
+        let userCity = document.getElementsByName('city')
+        let registerForm = document.querySelector('form')
+
+        registerForm.addEventListener('submit', (e) => {
+            e.preventDefault()
+
+            localStorage.setItem("FirstName", userFname.value)
+            localStorage.setItem("LastName", userLname.value)
+            localStorage.setItem("Email", userEmail.value)
+            localStorage.setItem("PhoneNo", userPhoneNo.value)
+            localStorage.setItem("Address", userAddress.value)
+
+
+            userGender.forEach((e) => {
+                if (e.checked) {
+                    console.log(e);
+                    localStorage.setItem("Gender", e.value)
+                }
+            })
+            userCity.forEach((e) => {
+                if (e.selected) {
+                    localStorage.setItem("City", e.value)
+                }
+            }) 
+
+            let asyncVoice = window.speechSynthesis
+            let speakText = new SpeechSynthesisUtterance("Hey Register Successful")
+            asyncVoice.speak(speakText)
+
+        })
+    </script>
+
+
 </body>
 
 </html>

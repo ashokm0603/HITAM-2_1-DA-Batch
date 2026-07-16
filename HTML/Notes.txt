@@ -159,3 +159,24 @@ Data types:
             ii. Objects 
             iii. Functions 
             iv. class Types 
+
+
+Functions : 
+-----------
+
+Types of Functions in JS : 
+--------------------------
+    
+    1. named Function/ normal Function
+    2. Functional expression 
+    3. Arrow Function 
+    4. IIF(immediate invoking Function)
+    5. higher order Function 
+    6. callback Function
+
+
+BOM (Browsers object model )
+-----------------------------
+    ->Every browsers can contains BOM 
+    ->BOM contains predefine inbuilt "Windows Object"
+

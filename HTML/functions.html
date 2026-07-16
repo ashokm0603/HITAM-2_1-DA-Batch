@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let empDetails = { name: "sai", email: "sai@gmail.com" }
+
+        // normal function 
+        function display() {
+
+            let password = "tweFWEFE653243278VAHSJJ.gsds"
+            console.log(empDetails);
+            return password
+        }
+        display()
+        display()
+
+        //functional Expression
+        const test = function (a, b, c) {
+            console.log(a, b, c);
+        }
+        test(10, 20, 30)
+
+        //Arrow Function (ES6)
+        const arrTest = () => { console.log("HELLO"); }
+        arrTest();
+        arrTest();
+
+
+        //immediate invoking function or self calling function 
+        (function () {
+            let password = "!admin@123"
+            let APIKey = "asdhwfjewfvscycfksyudg"
+            console.log(password);
+            console.log(APIKey);
+        })
+            ()
+
+
+
+
+        //Higher order function : Any functions that will be accept another functions as a parameter 
+        function HomePage(register, login) {
+            console.log("Welcome to Home page");
+        }
+        function LoginPage() {
+            console.log("User Login Successfully");
+        }
+
+        function RegisterPage() {
+            console.log("User register Successfully");
+        }
+
+        HomePage(RegisterPage(), LoginPage())
+
+
+        let arr = [10, 20, 30, 40]
+
+        //for in Loop 
+        for(ind in arr) {
+            console.log(ind);
+        }
+        //for of Loop 
+        for(ind of arr) {
+            console.log(ind);
+        }
+
+        //forEach loop
+        arr.forEach((v, ind, a) => {
+            console.log(v, "-->", ind, "-->", a);
+        })
+
+
+
+
+        console.log(this);
+
+        let name=prompt("Enter ur Name")
+        console.log(name);
+        
+        // setInterval(()=>{
+        //     console.log("HELLO");
+        // },2000)
+
+    </script>
+</body>
+
+</html>

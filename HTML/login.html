@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <style>
-        *{
+        * {
             padding: 0;
-            margin:0;
+            margin: 0;
         }
 
-        form{
+        form {
             height: 100vh;
             display: flex;
             justify-content: center;
@@ -20,7 +21,7 @@
             background-size: cover;
         }
 
-        fieldset{
+        fieldset {
             border-radius: 10px 50px;
             padding: 50px 30px;
             width: 300px;
@@ -31,27 +32,28 @@
             box-shadow: 3px 3px 3px aliceblue;
         }
 
-        h1{
+        h1 {
             text-align: center;
             margin-bottom: 20px;
             font-style: italic;
-            background-image: linear-gradient(45deg,red, orange);
+            background-image: linear-gradient(45deg, red, orange);
             color: transparent;
             -webkit-background-clip: text;
         }
 
-        button{
+        button {
             background-color: peru;
-            padding:10px 30px ;
+            padding: 10px 30px;
             border-radius: 10px;
             border: none;
-            box-shadow: 8px 8px 8px ;
+            box-shadow: 8px 8px 8px;
             color: aliceblue;
             font-weight: bold;
             font-style: italic;
             margin-left: 20px;
         }
-        button:hover{
+
+        button:hover {
             transform: scale(1.1);
             cursor: pointer;
             text-shadow: 3px 3px 3px aliceblue;
@@ -59,40 +61,111 @@
             background-color: rgb(153, 98, 43);
         }
 
-        label{
+        label {
             color: aliceblue;
             font-weight: bold;
             font-style: italic;
         }
-        label:first-of-type::before{
+
+        label:first-of-type::before {
             content: "🙎🏻";
         }
-        label:last-of-type::before{
-            content:"🔐"
+
+        label:last-of-type::before {
+            content: "🔐"
         }
-        input{
-            padding: 8px ;
+
+        input {
+            padding: 8px;
             border-radius: 8px;
+        }
+
+        #otp-container {
+            display: flex;
+            justify-content: space-evenly;
         }
     </style>
 </head>
+
 <body>
     <form action="">
         <fieldset>
             <legend>Login</legend>
-
             <h1>Login</h1>
             <label for="username">Username: </label>
-            <input type="text" id="username" placeholder="Enter Username"> 
+            <input type="email" name="fi-sender-email" id="email" placeholder="Enter Username">
             <br> <br>
-            
+
             <label for="psw">Password:</label>
             <input type="password" id="psw" placeholder="Enter password">
             <br> <br>
-            
+
+            <div id="otp-container">
+                <button id="otp" type="button">Generate OTP</button>
+                <input type="text" name="fi-text-message" id="message" placeholder="Enter generated otp">
+            </div>
+            <br> <br>
+
             <button type="submit">Sign In</button>
             <button type="reset">Cancel</button>
         </fieldset>
     </form>
+
+    <script src="https://forminit.com/sdk/v1/forminit.js"></script>
+    <script>
+
+        let otp;
+        let otpBtn = document.getElementById('otp')
+        const forminit = new Forminit();
+     
+        let loginForm = document.querySelector('form')
+
+        otpBtn.addEventListener('click', async (a) => {
+            otp = Math.floor(Math.random() * 1000000)
+            alert("otp generated Successfully")
+
+            const formData = new FormData(loginForm);
+            const { data, error } = await forminit.submit('oduja2zrd5n', {
+                blocks: [
+                    {
+                        type: 'sender',
+                        properties: {
+                            email: document.getElementById('email').value,
+                            firstName: localStorage.getItem('FirstName'),
+                            lastName: localStorage.getItem("LastName"),
+                        },
+                    },
+                    {
+                        type: 'text',
+                        name: 'message',
+                        value: `Your Login OTP :${otp}`,
+                    }
+                ]
+            });
+
+            
+        })
+
+
+
+
+
+
+
+        loginForm.addEventListener('submit', async (a) => {
+            a.preventDefault()
+
+            console.log(a.target);
+
+            const formData = new FormData(a.target);
+            const { data, error } = await forminit.submit(FORM_ID, formData);
+
+            console.log(data);
+
+
+        })
+
+    </script>
 </body>
+
 </html>

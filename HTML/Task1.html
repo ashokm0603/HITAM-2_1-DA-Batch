@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+</head>
+
+<body>
+    <button>Click HERE TO GENERATE OTP</button>
+    <h4>OTP : <span></span> </h4>
+    <button id="btn">Click to Apply Job in TCS</button>
+    <a href=""></a>
+    
+    <script>
+        let b = document.querySelector("body");
+        let btn = document.querySelector("button")
+        //click even using addEventListener
+        btn.addEventListener('click', () => {
+            let otp = Math.floor(Math.random() * 1000000);
+            let span = document.querySelector("span")
+            span.innerText = otp
+            alert("OTP generated Successfully")
+        })
+
+
+        // setInterval(() => {
+        //     b.style.backgroundColor = `#${Math.floor(Math.random() * 1000000)}`
+        // }, 3000)
+
+        console.log(Math.floor(42.4425));
+        console.log(Math.sqrt(42.4425));
+        console.log(Math.ceil(42.4425));
+        console.log(Math.floor(Math.random() * 1000000));
+
+        console.log(b);
+        console.log(btn);
+
+
+
+        let jobBtn = document.getElementById('btn')
+        let link=document.querySelector('a')
+        jobBtn.addEventListener('click',()=>{
+            link.href="https://www.tcs.com/careers"
+            link.innerText='https://www.tcs.com/careers'
+        })
+
+    </script>
+</body>
+
+</html>
